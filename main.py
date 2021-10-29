@@ -7,5 +7,5 @@ mled.showMessage("ClockPi v." + version, 0.01)
 try:
     mled.clockStart()
 except KeyboardInterrupt:
-    mled.clockStop()
     mled.showMessage('Goodbye', 0.01)
+    mled.clockStop()
