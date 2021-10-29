@@ -37,3 +37,32 @@ libtiff.so.5: cannot open shared object file: No such file or directory
 ```
 You need install
 >sudo apt install libtiff5
+
+## Autostart with system
+Add service file:
+>sudo nano /etc/systemd/system/clockpi.service
+```bash
+[Unit]
+Description=Clock on matrix led
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+KillSignal=SIGINT
+User=<username>
+ExecStart=/usr/bin/python3 /home/<username>/ClockPi/main.py
+
+[Install]
+WantedBy=multi-user.target
+```
+Replace `<username>` with Yours user
+
+Reload the daemon
+>sudo systemctl daemon-reload
+
+Enable mocremote service at startup
+>sudo systemctl enable clockpi.service
+
+Start our service
+>sudo systemctl start clockpi.service
