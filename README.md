@@ -1,2 +1,2 @@
 # ClockPi
-Simple clock build with Raspberry Pi Zero W and 8 Mattrix Led 8x8.
+Simple clock build with Raspberry Pi Zero W and 8 mattrix led 8x8.
