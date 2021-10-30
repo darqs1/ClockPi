@@ -11,9 +11,7 @@ try:
     mled.clockStart()
     while True:
         if (len(mes.messages) > 0):
-            print('There is message to show')
-        else:
-            print('zero messages to print')
+            mled.showMessage(mes.messages[0], 0.01)
         sleep(1)
 
 except KeyboardInterrupt:
