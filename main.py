@@ -10,7 +10,7 @@ mes = Messages()
 try:
     mled.clockStart()
     while True:
-        if (mes.messages.count > 0):
+        if (mes.messages.count() > 0):
             print('There is message to show')
         else:
             print('zero messages to print')
