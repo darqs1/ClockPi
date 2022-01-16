@@ -1,1 +1,1 @@
-version = "0.5 test 1.05"
+version = "1.05"
