@@ -7,7 +7,8 @@ class Messages:
     def checkMessages(self):
         with open(os.getcwd() + '/messages.txt') as f:
             line = f.readline()
-            self.messages.append(line)
+            if line!='':
+                self.messages.append(line)
         
         # clear file
         open(os.getcwd() + '/messages.txt', 'w').close()

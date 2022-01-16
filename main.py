@@ -13,7 +13,7 @@ try:
         mes.checkMessages()
         if (len(mes.messages) > 0):
             mled.clockStop()
-            mled.showMessage(mes.messages.pop(0), 0.01)
+            mled.showMessage(mes.messages.pop(), 0.01)
             mled.clockStart()
             # get break to another message
             sleep(3)
