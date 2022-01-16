@@ -5,4 +5,5 @@ class Messages:
     def checkMessages(self):
         with open('messages.txt') as f:
             line = f.readline()
+            print("line: ", line)
             self.messages.append(line)

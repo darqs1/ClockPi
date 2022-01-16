@@ -12,6 +12,7 @@ try:
     while True:
         if (len(mes.messages) > 0):
             mled.showMessage(mes.messages[0], 0.01)
+        print("mess:", mes.messages[0])
         sleep(1)
 
 except KeyboardInterrupt:
