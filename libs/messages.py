@@ -9,6 +9,7 @@ class Messages:
             line = f.readline()
             if line!='':
                 self.messages.append(line)
+            print("Messages:", self.messages)
         
         # clear file
         open(os.getcwd() + '/messages.txt', 'w').close()
