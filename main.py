@@ -12,7 +12,11 @@ try:
     while True:
         mes.checkMessages()
         if (len(mes.messages) > 0):
+            mled.clockStop()
             mled.showMessage(mes.messages[0], 0.01)
+            mled.clockStart()
+            # get break to another message
+            sleep(3)
         sleep(1)
 
 except KeyboardInterrupt:
