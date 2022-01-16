@@ -8,3 +8,6 @@ class Messages:
         with open(os.getcwd() + '/messages.txt') as f:
             line = f.readline()
             self.messages.append(line)
+        
+        # clear file
+        open(os.getcwd() + '/messages.txt', 'w').close()
