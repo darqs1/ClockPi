@@ -1,5 +1,6 @@
 # own files
 .local_variables.py
+messages.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
