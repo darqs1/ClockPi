@@ -1,6 +1,9 @@
 # ClockPi
 Simple clock build with Raspberry Pi Zero W and 8 matrix led 8x8.
-It display clock with seconds and date (day and month)
+It display clock with seconds and date (day and month).
+
+## messages.txt
+This feature show messages - every line from __messages.txt__ is a new message. When program read messages it clean this file and send message to display with 3 second sleeps between messages. File is readed in every 1 second. New lines are added to queue at the end, program read always first line to display message and delete it form queue.
 
 ## What You need
 - Raspberry Pi  (tested on RPi Zero and RPi 3B)
@@ -51,6 +54,7 @@ Type=simple
 Restart=always
 KillSignal=SIGINT
 User=<username>
+WorkingDirectory=/home/clockpi/ClockPi
 ExecStart=/usr/bin/python3 /home/<username>/ClockPi/main.py
 
 [Install]
